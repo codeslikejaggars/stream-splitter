@@ -10,7 +10,7 @@
     "test": "mocha --compilers js:babel/register --recursive --full-trace"
   },
   "author": "",
-  "license": "UNLICENSED",
+  "license": "ISC",
   "devDependencies": {
     "babel": "^5.8.20",
     "babel-eslint": "^4.0.5",
