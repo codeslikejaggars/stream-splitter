@@ -1,0 +1,25 @@
+{
+  "name": "read-lines",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/streamSplitter.js",
+  "scripts": {
+    "lint": "eslint .",
+    "compile": "mkdir -p ./lib; babel ./streamSplitter.js > ./lib/streamSplitter.js",
+    "prepublish": "npm run compile",
+    "test": "mocha --compilers js:babel/register --recursive --full-trace"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel": "^5.8.20",
+    "babel-eslint": "^4.0.5",
+    "chai": "^3.2.0",
+    "eslint": "^1.0.0",
+    "mocha": "^2.2.5",
+    "stream-array": "^1.1.0"
+  },
+  "dependencies": {
+    "through2": "^2.0.0"
+  }
+}

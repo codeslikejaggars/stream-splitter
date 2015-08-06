@@ -1,0 +1,39 @@
+{
+  "parser": "babel-eslint",
+
+  "ecmaFeatures" : {
+    "arrowFunctions" : true,
+    "blockBindings" : true,
+    "classes" : true,
+    "forOf" : true,
+    "generators" : true,
+    "jsx" : true,
+    "modules" : true,
+    "destructuring" : true,
+    "jsx": true
+  },
+  "rules" : {
+    "semi" : [2, "always"],
+    "quotes" : [2, "single"],
+    "key-spacing" : [2, {
+      "beforeColon" : true,
+      "afterColon" : true
+    }],
+    "no-unused-vars": [2, {
+      "vars": "all",
+      "args": "none"
+    }],
+    "no-underscore-dangle" : 0,
+    "no-use-before-define" : [2, "nofunc"],
+    "no-var" : 2,
+    "prefer-const": 0,
+    "object-shorthand" : 1,
+    "no-empty" : 1
+  },
+  "globals" : {
+    "require" : true
+  },
+  "env": {
+    "node": true
+  }
+}
