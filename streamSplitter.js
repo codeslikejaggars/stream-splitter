@@ -4,11 +4,17 @@ import through from 'through2';
 /**
  * Returns a transform stream that splits the readable into
  * chunks ala `String.split()`
- * @param  {String|RegExp} options.separator the separator to use
+ * @param  {String|RegExp} separator the separator to use
  * @param  {Boolean} options.skipEmptyChunks whether empty chunks will be ignored (e.g. last lines)
+ * @param  {'head' or 'tail' or falsy} options.retainSeparator if specified, where separator will be retained
  * @return {TransformStream} a transform stream
  */
-export default function streamSplitter({separator = /\r?\n/, skipEmptyChunks = true} = {}) {
+export default function streamSplitter(separator = /\r?\n/, {
+  skipEmptyChunks = true, retainSeparator = false} = {}) {
+  // @TODO validate arguments
+  // @TODO implement separator retention
+  // @FIXME handle calling split() with regexp containing groups
+  // /Problem \d+/
   function maybePush(stream, chunk) {
     if(chunk || !skipEmptyChunks) {
       stream.push(chunk);
